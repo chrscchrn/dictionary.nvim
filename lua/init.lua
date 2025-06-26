@@ -25,6 +25,7 @@ local function fetch_definition(word, callback)
   }, {
     stdout_buffered = true,
     on_stdout = function(_, data)
+		log(data)
       if not data or #data == 0 then
         log('No definition found in API response for: ' .. tostring(word))
         callback("No definition found.")
