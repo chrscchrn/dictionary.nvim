@@ -67,6 +67,7 @@ end
 
 -- Main function to trigger lookup
 function M.lookup_word()
+	log('Looking up word')
   local word = get_word_under_cursor()
   if not word or word == "" then
     vim.notify("No word under cursor.", vim.log.levels.WARN)
@@ -77,6 +78,7 @@ function M.lookup_word()
   fetch_definition(word, function(definition)
     show_definition_popup(word, definition)
   end)
+  log('end lookup word')
 end
 
 -- Setup keymap
