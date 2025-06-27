@@ -25,14 +25,12 @@ local function fetch_definition(word, callback)
   }, {
     stdout_buffered = true,
     on_stdout = function(_, data)
-		log(vim.inspect(data))
       if not data or #data == 0 then
         log('No definition found in API response for: ' .. tostring(word))
         callback("No definition found.")
         return
       end
       local ok, result = pcall(vim.fn.json_decode, table.concat(data, "\n"))
-	  log(result)
       if not ok or not result or not result[1] or not result[1].meanings then
         log('API response could not be decoded for: ' .. tostring(word))
         callback("No definition found.")
@@ -46,12 +44,6 @@ local function fetch_definition(word, callback)
       end
       log('Definition(s) found for ' .. tostring(word) .. ': ' .. table.concat(defs, "; "))
       callback(table.concat(defs, "\n"))
-    end,
-    on_stderr = function(_, data)
-      if data and #data > 0 then
-        log('Error fetching definition for ' .. tostring(word) .. ': ' .. table.concat(data, ' '))
-        callback("Error fetching definition.")
-      end
     end,
   })
 end
