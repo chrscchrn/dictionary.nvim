@@ -3,6 +3,8 @@
 A Neovim plugin for instantly looking up English word definitions using [dictionaryapi.dev](https://dictionaryapi.dev/). Shows definitions in a floating window, inspired by signature help popups.
 
 ---
+[demo](demo.gif)
+---
 
 ## Features
 - Lookup definitions for the word under the cursor
