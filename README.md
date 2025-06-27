@@ -14,10 +14,8 @@
 
 - **Quick lookup**: Get definitions for the word under your cursor
 - **Async & non-blocking**: Never lose your editing flow
-- **Beautiful floating popups**: Definitions appear in a stylish markdown window
-- **One-tap key mapping**: Just hit `<leader>d` (or your favorite key!)
+- **One-tap key mapping**: Just hit `<leader>d` (or remap)
 - **Minimal dependencies**: Uses only Neovim built-ins and `curl`
-- **Debug logging**: All lookups logged for easy troubleshooting
 
 ---
 
