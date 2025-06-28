@@ -1,4 +1,4 @@
-# Dictionary.nvim
+# 📚 Dictionary.nvim
 
 > Instantly look up English word definitions in Neovim! Supercharge your workflow with floating popups, powered by [dictionaryapi.dev](https://dictionaryapi.dev/) and a sprinkle of Neovim magic.
 
