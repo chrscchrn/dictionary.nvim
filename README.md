@@ -1,6 +1,6 @@
 # 📚 Dictionary.nvim
 
-> Instantly look up English word definitions in Neovim! Supercharge your workflow with floating popups, powered by [dictionaryapi.dev](https://dictionaryapi.dev/) and a sprinkle of Neovim magic.
+> Instantly look up English word definitions in Neovim! Powered by [dictionaryapi.dev](https://dictionaryapi.dev/).
 
 ---
 
@@ -14,14 +14,10 @@
 
 - **Quick lookup**: Get definitions for the word under your cursor
 - **Async & non-blocking**: Never lose your editing flow
-- **One-tap key mapping**: Just hit `<leader>d` (or remap)
-- **Minimal dependencies**: Uses only Neovim built-ins and `curl`
 
 ---
 
 ## Installation
-
-Add with your favorite plugin manager:
 
 <details>
 <summary>lazy.nvim</summary>
@@ -53,19 +49,14 @@ use {
 
 ## Usage
 
-1. Place your cursor over any English word in normal mode.
-2. Press `<leader>d` (default) to summon the definition popup.
-3. If there's no word, you'll get a friendly warning.
+Press `<leader>d` (default) to summon the definition popup.
 
 ---
 
 ## Configuration
 
-Zero-config out of the box! Want a custom keymap? Just override it after setup:
-
 ```lua
 require('dictionary').setup()
-vim.keymap.set('n', '<leader>w', require('dictionary').lookup_word, { desc = 'Dictionary Lookup' })
 ```
 
 ---
@@ -77,4 +68,4 @@ vim.keymap.set('n', '<leader>w', require('dictionary').lookup_word, { desc = 'Di
 ---
 
 ## Credits
-- [dictionaryapi.dev](https://dictionaryapi.dev/) for the free dictionary API
+- [dictionaryapi.dev](https://dictionaryapi.dev/) for the dictionary API
